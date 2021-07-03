@@ -39,5 +39,6 @@ while True:
                 print(f"Response code: {response}")
             time.sleep(random.uniform(*_config()['random_range']))
     else:
-        print(f"No friend requests found, sleeping {_config()['idling_delay']} seconds")
+        print(f"No friend requests found.")
+    print(f"Sleeping {_config()['idling_delay']} seconds")
     time.sleep(_config()['idling_delay'])
