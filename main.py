@@ -34,7 +34,7 @@ while True:
         for friend in friendlist:
             response = vk._vk.friends.add(user_id=friend)
             if response == 2:
-                print(f"Added {friend} successfully!")
+                print(f"Added user id{friend} successfully!")
             else:
                 print(f"Response code: {response}")
             time.sleep(random.uniform(*_config()['random_range']))
