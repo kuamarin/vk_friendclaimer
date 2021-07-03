@@ -1,0 +1,6 @@
+{
+    "token":"PUT_YOUR_TOKEN_HERE",
+    "mode":"new",
+    "idling_delay":1000,
+    "random_range":[1,5]
+}
