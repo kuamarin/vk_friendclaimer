@@ -32,11 +32,14 @@ while True:
         friendlist = vk._vk.friends.getRequests(out=0, need_viewed=1)["items"]
     if len(friendlist)>0:
         for friend in friendlist:
-            response = vk._vk.friends.add(user_id=friend)
-            if response == 2:
-                print(f"Added user id{friend} successfully!")
-            else:
-                print(f"Response code: {response}")
+            try:
+                response = vk._vk.friends.add(user_id=friend)
+                if response == 2:
+                    print(f"Added user id{friend} successfully!")
+                else:
+                    print(f"Response code: {response}")
+            except Exception as e:
+                print(f'Error: {e}, still working.')
             time.sleep(random.uniform(*_config()['random_range']))
     else:
         print(f"No friend requests found.")
